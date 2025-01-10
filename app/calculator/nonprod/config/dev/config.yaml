@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-dev-config
+  name: calculator-config-nonprd
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: git@github.com:miw1513/k8s-calculator-nonprd.git
+    repoURL: git@github.com:miw1513/k8s-calculator-config-nonprd.git
     targetRevision: main
     path: manifest/dev
   destination:
