@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calculator-config-nonprd-uat
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:miw1513/k8s-calculator-config-nonprd.git
+    targetRevision: main
+    path: manifest/uat
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: calculator-nonprd-uat
+  syncPolicy:
+    automated:
+      prune: true
