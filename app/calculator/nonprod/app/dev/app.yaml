@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-deployment
+  name: calculator-nonprd-dev
   namespace: argocd
 spec:
   project: default
@@ -12,7 +12,7 @@ spec:
     helm:
       releaseName: calculator-nonprd-dev
       valueFiles:
-        - ./helm-values/values.dev.yaml
+        - ./helm-values/dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: calculator-nonprd-dev
