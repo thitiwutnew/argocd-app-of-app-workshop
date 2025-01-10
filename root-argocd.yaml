@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:miw1513/argocd-app-gitops.git
+    repoURL: git@github.com:miw1513/argocd-app-of-app-workshop.git
     targetRevision: main
     path: app
     directory:
