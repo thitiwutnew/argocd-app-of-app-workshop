@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: calculator-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: ./
+    repoURL: git@github.com:miw1513/k8s-calculator-prd.git
+    targetRevision: main
+    helm:
+      releaseName: calculator-prod
+      valueFiles:
+        - ./helm-values/prd.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: calculator-prod
+  syncPolicy:
+    automated:
+      prune: true
