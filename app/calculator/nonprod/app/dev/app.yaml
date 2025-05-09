@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calculator-nonprd-dev
+  name: calculater-app-nonprod-dev
   namespace: argocd
 spec:
   project: default
   source:
     path: ./
-    repoURL: git@github.com:miw1513/k8s-calculator-nonprd.git
+    repoURL: git@github.com:thitiwutnew/calculater-app-nonprod.git
     targetRevision: main
     helm:
-      releaseName: calculator-nonprd-dev
+      releaseName: calculater-app-nonprod-dev
       valueFiles:
-        - ./helm-values/dev.yaml
+        - ./values/dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: calculator-nonprd-dev

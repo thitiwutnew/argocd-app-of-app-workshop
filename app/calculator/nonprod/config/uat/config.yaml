@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:miw1513/k8s-calculator-config-nonprd.git
     targetRevision: main
-    path: manifest/uat
+    path: uat
   destination:
     server: https://kubernetes.default.svc
     namespace: calculator-nonprd-uat
