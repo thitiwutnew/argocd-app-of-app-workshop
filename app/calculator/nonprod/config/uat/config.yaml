@@ -11,7 +11,7 @@ spec:
     path: uat
   destination:
     server: https://kubernetes.default.svc
-    namespace: nonprd-uat
+    namespace: nonprod-uat
   syncPolicy:
     automated:
       prune: true
