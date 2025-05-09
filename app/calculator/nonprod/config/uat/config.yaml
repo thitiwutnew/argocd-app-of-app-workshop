@@ -11,7 +11,7 @@ spec:
     path: uat
   destination:
     server: https://kubernetes.default.svc
-    namespace: calculator-nonprd-uat
+    namespace: nonprd-uat
   syncPolicy:
     automated:
       prune: true
