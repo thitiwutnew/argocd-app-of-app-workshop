@@ -14,8 +14,8 @@ spec:
       valueFiles:
         - ./values/dev.yaml
   destination:
-    server: https://kubernetes.default.svc
-    namespace: nonprod-dev
+    server: gke_k8s-ms-dev_asia-southeast1_cluster-demo
+    namespace: new-dev
   syncPolicy:
     automated:
       prune: true
