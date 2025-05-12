@@ -14,7 +14,7 @@ spec:
       valueFiles:
         - ./values/dev.yaml
   destination:
-    server: gke_k8s-ms-dev_asia-southeast1_cluster-demo
+    server: https://gke_k8s-ms-dev_asia-southeast1_cluster-demo
     namespace: new-dev
   syncPolicy:
     automated:
