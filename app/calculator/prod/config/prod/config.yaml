@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: calculator-config-prod
+  name: calculater-app-config-prod
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: git@github.com:miw1513/k8s-calculator-config-prd.git
+    repoURL: git@github.com:thitiwutnew/calculater-app-config-prod.git
     targetRevision: main
-    path: manifest/prd
+    path: prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: calculator-prod
+    namespace: prod-calculator
   syncPolicy:
     automated:
       prune: true
