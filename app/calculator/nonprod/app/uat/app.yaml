@@ -15,7 +15,7 @@ spec:
         - ./values/uat.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: calculator-nonprd-dev
+    namespace: nonprod-uat
   syncPolicy:
     automated:
       prune: true
